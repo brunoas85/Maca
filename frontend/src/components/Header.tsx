@@ -13,6 +13,22 @@ export function Header({ onCartClick }: { onCartClick: () => void }) {
             Macá
           </span>
         </Link>
+
+        <nav className="hidden items-center gap-8 md:flex">
+          <a
+            href="/#nosotros"
+            className="font-display text-sm font-medium tracking-wide text-ink uppercase hover:text-gold-dark"
+          >
+            Quiénes somos
+          </a>
+          <a
+            href="/#catalogo"
+            className="font-display text-sm font-medium tracking-wide text-ink uppercase hover:text-gold-dark"
+          >
+            Pedidos
+          </a>
+        </nav>
+
         <button
           type="button"
           onClick={onCartClick}

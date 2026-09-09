@@ -28,8 +28,11 @@ Sitio web para **Macá**, una cervecería artesanal que solo cocina y vende su p
 
 ## 🎨 Identidad visual
 
-- **Logo fuente**: `frontend/public/Maca.PNG` (isotipo original, provisto por el negocio). De ahí se generaron assets recortados y con fondo transparente en `frontend/public/brand/`: `wordmark.png` (el texto "MACÁ" solo, para el navbar), `emblem.png` (lúpulos + insignia circular del ave, para el hero/acentos), `badge.png` (solo la insignia circular) y `full.png` (logo completo).
-- **El ave**: Macá hace referencia al **macá tobiano** (*Podiceps gallardoi*), ave endémica y en peligro crítico de la Patagonia argentina. La foto de hero (`frontend/public/brand/hero-maca-tobiano.jpg`) es de Francisco González Táboas, tomada de Wikimedia Commons bajo licencia **CC BY-SA 4.0** — el crédito se muestra en el footer del sitio; si se reemplaza esa imagen, mantener el crédito acorde a la licencia de la nueva fuente.
+- **Assets fuente**: `design-sources/` (en la raíz del repo, fuera de `frontend/public` para no inflar el sitio publicado) guarda los archivos originales provistos por el negocio — logos (`Maca.PNG`, `Macalogo.PNG`, `Macalogo1.PNG`), fotos del macá tobiano (`macáReal*.PNG`) y stock de Unsplash. Cualquier asset nuevo que se procese (recortar, quitarle fondo, comprimir) debería guardar el original acá y el resultado optimizado en `frontend/public/brand/`.
+- **Logo actual**: `frontend/public/brand/macalogo1.png` — es `Macalogo1.PNG` con la transparencia reconstruida (el archivo original tenía el fondo a cuadros "quemado" en los píxeles, no era alfa real). Se usa en el navbar y como sello en el hero.
+- **El ave**: Macá hace referencia al **macá tobiano** (*Podiceps gallardoi*), ave endémica y en peligro crítico de la Patagonia argentina.
+- **Hero**: `frontend/public/brand/hero-maca.jpg`, generado a partir de `design-sources/macaHero.png`.
+- **Sección "Quiénes somos"**: `frontend/public/brand/nosotros.jpg`, generado a partir de `design-sources/fabio-alves-...-unsplash.jpg`.
 - **Paleta y tipografía**: definidas en `frontend/src/index.css` (bloque `@theme` de Tailwind v4) — tonos cálidos (`cream`, `paper`, `ink`, `gold`) tomados de la tinta del logo original. Tipografía condensada **Oswald** para títulos/marca (cargada desde Google Fonts en `index.html`), **Inter** para texto de cuerpo.
 - **Referencia de estilo**: inspirado en sitios de cervecerías artesanales patagónicas como [cervezablest.com.ar](https://cervezablest.com.ar/) — hero a pantalla completa con fotografía, insignias circulares por producto, tipografía condensada en mayúsculas.
 

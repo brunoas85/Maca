@@ -55,7 +55,7 @@ export function CatalogPage() {
         />
       </section>
 
-      <section id="catalogo" className="mx-auto max-w-5xl px-4 py-16 scroll-mt-16">
+      <section id="catalogo" className="mx-auto max-w-5xl scroll-mt-[100px] px-4 py-16">
         <div className="mb-10 text-center">
           <span className="inline-block rounded-full bg-ink px-4 py-1 font-display text-xs font-medium tracking-[0.2em] text-cream uppercase">
             Macá artesanal
@@ -81,6 +81,35 @@ export function CatalogPage() {
           {beers.map((beer) => (
             <BeerCard key={beer.id} beer={beer} />
           ))}
+        </div>
+      </section>
+
+      <section id="nosotros" className="scroll-mt-[100px] bg-ink py-16 text-cream">
+        <div className="mx-auto grid max-w-5xl gap-10 px-4 sm:grid-cols-2 sm:items-center">
+          <div>
+            <span className="inline-block rounded-full border border-gold/50 px-4 py-1 font-display text-xs font-medium tracking-[0.2em] text-gold uppercase">
+              Quiénes somos
+            </span>
+            <h2 className="mt-4 font-display text-3xl font-semibold tracking-tight uppercase sm:text-4xl">
+              Cerveza de acá, para acá
+            </h2>
+            <p className="mt-4 text-cream/80">
+              Macá nació en San Martín de los Andes con una idea simple: cocinar buena cerveza
+              artesanal y llevarla directo a tu casa. No tenemos local ni bar propio — todo lo que
+              hacemos, desde la receta hasta la entrega, es para que la disfrutes donde quieras.
+            </p>
+            <p className="mt-4 text-cream/80">
+              El nombre es un homenaje al macá tobiano, un ave única de la Patagonia. Rara,
+              resistente y de acá — como nuestra cerveza.
+            </p>
+          </div>
+          <div className="overflow-hidden rounded-2xl">
+            <img
+              src="/brand/nosotros.jpg"
+              alt="Sirviendo una cerveza artesanal"
+              className="h-full w-full object-cover"
+            />
+          </div>
         </div>
       </section>
     </main>
