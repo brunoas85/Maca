@@ -20,7 +20,7 @@ export function CatalogPage() {
     <main>
       <section
         className="relative flex min-h-[72vh] items-center bg-cover bg-[center_30%] sm:min-h-[85vh]"
-        style={{ backgroundImage: "url(/brand/hero-maca-tobiano.jpg)" }}
+        style={{ backgroundImage: "url(/brand/hero-maca.jpg)" }}
       >
         <div className="absolute inset-0 bg-gradient-to-r from-ink/80 via-ink/45 to-ink/10" />
         <div className="absolute inset-0 bg-gradient-to-t from-ink/70 via-transparent to-transparent" />
@@ -48,10 +48,10 @@ export function CatalogPage() {
         </div>
 
         <img
-          src="/brand/emblem.png"
+          src="/brand/macalogo1.png"
           alt=""
           aria-hidden="true"
-          className="absolute right-4 bottom-4 hidden w-40 opacity-90 drop-shadow-lg sm:block md:w-52"
+          className="absolute right-4 bottom-4 hidden w-36 opacity-95 drop-shadow-lg sm:block md:w-44"
         />
       </section>
 
