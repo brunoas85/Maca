@@ -57,7 +57,7 @@ export function CatalogPage() {
         />
       </section>
 
-      <section id="catalogo" className="mx-auto max-w-5xl scroll-mt-[100px] px-4 py-16">
+      <section id="catalogo" className="mx-auto max-w-5xl scroll-mt-[175px] px-4 py-16">
         <div className="mb-10 text-center">
           <span className="inline-block rounded-full bg-ink px-4 py-1 font-display text-xs font-medium tracking-[0.2em] text-cream uppercase">
             Macá artesanal
@@ -86,7 +86,7 @@ export function CatalogPage() {
         </div>
       </section>
 
-      <section id="nosotros" className="scroll-mt-[100px] bg-ink py-16 text-cream">
+      <section id="nosotros" className="scroll-mt-[175px] bg-ink py-16 text-cream">
         <div className="mx-auto grid max-w-5xl gap-10 px-4 sm:grid-cols-2 sm:items-center">
           <div>
             <span className="inline-block rounded-full border border-gold/50 px-4 py-1 font-display text-xs font-medium tracking-[0.2em] text-gold uppercase">

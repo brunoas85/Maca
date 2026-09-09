@@ -6,9 +6,9 @@ export function Header({ onCartClick }: { onCartClick: () => void }) {
 
   return (
     <header className="sticky top-0 z-10 border-b border-line bg-cream/95 backdrop-blur">
-      <div className="mx-auto flex h-[100px] max-w-5xl items-center justify-between px-4">
+      <div className="mx-auto flex h-[175px] max-w-5xl items-center justify-between px-4">
         <Link to="/" className="flex items-center">
-          <img src="/brand/macaLogoNav.png" alt="Macá — Cerveza Artesanal Sanmartinense" className="h-[88px] w-auto" />
+          <img src="/brand/macaLogoNav.png" alt="Macá — Cerveza Artesanal Sanmartinense" className="h-[154px] w-auto" />
         </Link>
 
         <nav className="hidden items-center gap-8 md:flex">
