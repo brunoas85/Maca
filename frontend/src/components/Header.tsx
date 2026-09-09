@@ -5,19 +5,19 @@ export function Header({ onCartClick }: { onCartClick: () => void }) {
   const { count } = useCart();
 
   return (
-    <header className="sticky top-0 z-10 border-b border-neutral-200 bg-white/90 backdrop-blur dark:border-neutral-800 dark:bg-neutral-950/90">
-      <div className="mx-auto flex max-w-5xl items-center justify-between px-4 py-3">
-        <Link to="/" className="text-xl font-bold">
-          Macá
+    <header className="sticky top-0 z-10 border-b border-line bg-cream/95 backdrop-blur">
+      <div className="mx-auto flex max-w-5xl items-center justify-between px-4 py-2.5">
+        <Link to="/" className="flex items-center">
+          <img src="/brand/wordmark.png" alt="Macá" className="h-9 sm:h-10" />
         </Link>
         <button
           type="button"
           onClick={onCartClick}
-          className="relative rounded-full border border-neutral-300 px-4 py-2 text-sm font-medium dark:border-neutral-700"
+          className="relative rounded-full border border-ink/20 px-4 py-2 font-display text-sm font-medium tracking-wide text-ink uppercase"
         >
           Carrito
           {count > 0 && (
-            <span className="absolute -right-2 -top-2 flex h-5 w-5 items-center justify-center rounded-full bg-amber-600 text-xs text-white">
+            <span className="absolute -right-2 -top-2 flex h-5 w-5 items-center justify-center rounded-full bg-gold text-xs font-semibold text-paper">
               {count}
             </span>
           )}

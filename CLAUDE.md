@@ -26,6 +26,13 @@ Sitio web para **Macá**, una cervecería artesanal que solo cocina y vende su p
 - Gestión de catálogo: alta/baja/edición de cervezas, precios y stock.
 - Listado de pedidos recibidos, con cambio de estado: `pendiente` → `confirmado` → `entregado` (o `cancelado`).
 
+## 🎨 Identidad visual
+
+- **Logo fuente**: `frontend/public/Maca.PNG` (isotipo original, provisto por el negocio). De ahí se generaron assets recortados y con fondo transparente en `frontend/public/brand/`: `wordmark.png` (el texto "MACÁ" solo, para el navbar), `emblem.png` (lúpulos + insignia circular del ave, para el hero/acentos), `badge.png` (solo la insignia circular) y `full.png` (logo completo).
+- **El ave**: Macá hace referencia al **macá tobiano** (*Podiceps gallardoi*), ave endémica y en peligro crítico de la Patagonia argentina. La foto de hero (`frontend/public/brand/hero-maca-tobiano.jpg`) es de Francisco González Táboas, tomada de Wikimedia Commons bajo licencia **CC BY-SA 4.0** — el crédito se muestra en el footer del sitio; si se reemplaza esa imagen, mantener el crédito acorde a la licencia de la nueva fuente.
+- **Paleta y tipografía**: definidas en `frontend/src/index.css` (bloque `@theme` de Tailwind v4) — tonos cálidos (`cream`, `paper`, `ink`, `gold`) tomados de la tinta del logo original. Tipografía condensada **Oswald** para títulos/marca (cargada desde Google Fonts en `index.html`), **Inter** para texto de cuerpo.
+- **Referencia de estilo**: inspirado en sitios de cervecerías artesanales patagónicas como [cervezablest.com.ar](https://cervezablest.com.ar/) — hero a pantalla completa con fotografía, insignias circulares por producto, tipografía condensada en mayúsculas.
+
 ## 🛠️ Stack Tecnológico
 
 - **Frontend**: React + TypeScript + Vite, Tailwind CSS. Sitio web responsive, mobile-first (la mayoría del tráfico va a ser desde el celular).

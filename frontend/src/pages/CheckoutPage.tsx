@@ -44,8 +44,8 @@ export function CheckoutPage() {
   if (lines.length === 0) {
     return (
       <div className="mx-auto max-w-lg px-4 py-12 text-center">
-        <p className="text-neutral-500">Tu carrito está vacío.</p>
-        <Link to="/" className="mt-2 inline-block text-amber-700 underline">
+        <p className="text-ink-soft">Tu carrito está vacío.</p>
+        <Link to="/" className="mt-2 inline-block text-gold-dark underline">
           Ver catálogo
         </Link>
       </div>
@@ -80,58 +80,60 @@ export function CheckoutPage() {
 
   return (
     <main className="mx-auto max-w-lg px-4 py-8">
-      <h1 className="text-2xl font-bold">Datos de entrega</h1>
-      <p className="mt-1 text-sm text-neutral-500">
+      <h1 className="font-display text-2xl font-semibold tracking-tight text-ink uppercase">
+        Datos de entrega
+      </h1>
+      <p className="mt-1 text-sm text-ink-soft">
         Al confirmar te abrimos WhatsApp con el resumen para coordinar pago y entrega.
       </p>
 
       <form onSubmit={handleSubmit} className="mt-6 flex flex-col gap-4">
-        <label className="flex flex-col gap-1 text-sm">
+        <label className="flex flex-col gap-1 text-sm text-ink">
           Nombre
           <input
             required
             value={customerName}
             onChange={(e) => setCustomerName(e.target.value)}
-            className="rounded border border-neutral-300 px-3 py-2 dark:border-neutral-700 dark:bg-neutral-900"
+            className="rounded border border-line bg-paper px-3 py-2 text-ink"
           />
         </label>
-        <label className="flex flex-col gap-1 text-sm">
+        <label className="flex flex-col gap-1 text-sm text-ink">
           Dirección
           <input
             required
             value={address}
             onChange={(e) => setAddress(e.target.value)}
-            className="rounded border border-neutral-300 px-3 py-2 dark:border-neutral-700 dark:bg-neutral-900"
+            className="rounded border border-line bg-paper px-3 py-2 text-ink"
           />
         </label>
-        <label className="flex flex-col gap-1 text-sm">
+        <label className="flex flex-col gap-1 text-sm text-ink">
           Zona / barrio (opcional)
           <input
             value={zone}
             onChange={(e) => setZone(e.target.value)}
-            className="rounded border border-neutral-300 px-3 py-2 dark:border-neutral-700 dark:bg-neutral-900"
+            className="rounded border border-line bg-paper px-3 py-2 text-ink"
           />
         </label>
-        <label className="flex flex-col gap-1 text-sm">
+        <label className="flex flex-col gap-1 text-sm text-ink">
           Horario preferido (opcional)
           <input
             value={preferredTime}
             onChange={(e) => setPreferredTime(e.target.value)}
-            className="rounded border border-neutral-300 px-3 py-2 dark:border-neutral-700 dark:bg-neutral-900"
+            className="rounded border border-line bg-paper px-3 py-2 text-ink"
           />
         </label>
 
-        <div className="flex items-center justify-between border-t border-neutral-200 pt-4 font-semibold dark:border-neutral-800">
+        <div className="flex items-center justify-between border-t border-line pt-4 font-display font-semibold text-ink">
           <span>Subtotal</span>
           <span>{formatPrice(subtotal)}</span>
         </div>
 
-        {error && <p className="text-sm text-red-600">{error}</p>}
+        {error && <p className="text-sm text-red-700">{error}</p>}
 
         <button
           type="submit"
           disabled={submitting}
-          className="rounded-lg bg-amber-700 py-3 font-medium text-white disabled:opacity-60"
+          className="rounded-full bg-gold py-3 font-display font-semibold tracking-wide text-ink uppercase transition hover:bg-gold-dark disabled:opacity-60"
         >
           {submitting ? "Enviando..." : "Confirmar y coordinar por WhatsApp"}
         </button>
