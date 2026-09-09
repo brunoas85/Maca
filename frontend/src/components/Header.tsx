@@ -11,7 +11,7 @@ export function Header({ onCartClick }: { onCartClick: () => void }) {
           <img src="/brand/macaLogoNav.png" alt="Macá — Cerveza Artesanal Sanmartinense" className="h-[154px] w-auto" />
         </Link>
 
-        <nav className="hidden items-center gap-8 md:flex">
+        <nav className="hidden items-center gap-6 md:flex">
           <a
             href="/#nosotros"
             className="font-display text-sm font-medium tracking-wide text-ink uppercase hover:text-gold-dark"
@@ -23,6 +23,18 @@ export function Header({ onCartClick }: { onCartClick: () => void }) {
             className="font-display text-sm font-medium tracking-wide text-ink uppercase hover:text-gold-dark"
           >
             Pedidos
+          </a>
+          <a
+            href="/#birra-del-mes"
+            className="font-display text-sm font-medium tracking-wide text-ink uppercase hover:text-gold-dark"
+          >
+            Birra del mes
+          </a>
+          <a
+            href="/#eventos"
+            className="font-display text-sm font-medium tracking-wide text-ink uppercase hover:text-gold-dark"
+          >
+            Eventos
           </a>
         </nav>
 

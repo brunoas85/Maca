@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Route, Routes } from "react-router-dom";
 import { CartDrawer } from "./components/CartDrawer";
+import { Footer } from "./components/Footer";
 import { Header } from "./components/Header";
 import { CatalogPage } from "./pages/CatalogPage";
 import { CheckoutPage } from "./pages/CheckoutPage";
@@ -19,6 +20,7 @@ function App() {
           <Route path="/checkout" element={<CheckoutPage />} />
         </Routes>
       </div>
+      <Footer />
       <CartDrawer open={cartOpen} onClose={() => setCartOpen(false)} />
     </div>
   );

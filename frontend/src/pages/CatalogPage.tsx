@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import { BeerCard } from "../components/BeerCard";
 import { getBeers } from "../lib/api";
+import { formatPrice } from "../lib/format";
 import type { Beer } from "../types";
 
 export function CatalogPage() {
@@ -15,6 +17,8 @@ export function CatalogPage() {
       })
       .catch(() => setStatus("error"));
   }, []);
+
+  const featured = beers.find((beer) => beer.stock > 0) ?? beers[0];
 
   return (
     <main>
@@ -86,6 +90,50 @@ export function CatalogPage() {
         </div>
       </section>
 
+      {featured && (
+        <section
+          id="birra-del-mes"
+          className="mx-auto max-w-5xl scroll-mt-[175px] px-4 py-16"
+        >
+          <div className="grid gap-10 sm:grid-cols-2 sm:items-center">
+            <div className="order-2 sm:order-1">
+              <span className="inline-block rounded-full bg-gold px-4 py-1 font-display text-xs font-medium tracking-[0.2em] text-ink uppercase">
+                Birra del mes
+              </span>
+              <h2 className="mt-4 font-display text-3xl font-semibold tracking-tight text-ink uppercase sm:text-4xl">
+                {featured.name}
+              </h2>
+              <p className="mt-1 font-display text-sm tracking-wide text-gold-dark uppercase">
+                {featured.style} · {featured.abv}% ABV
+              </p>
+              <p className="mt-4 text-ink/80">{featured.description}</p>
+              <div className="mt-5 flex items-center gap-4">
+                <span className="font-display text-xl font-semibold text-ink">
+                  {formatPrice(featured.price)}
+                </span>
+                <Link
+                  to={`/cervezas/${featured.id}`}
+                  className="inline-block rounded-full bg-gold px-6 py-2 font-display text-sm font-semibold tracking-wide text-ink uppercase transition hover:bg-gold-dark"
+                >
+                  Pedila
+                </Link>
+              </div>
+            </div>
+            <div className="order-1 flex aspect-square items-center justify-center overflow-hidden rounded-full border-4 border-gold/70 bg-paper sm:order-2">
+              {featured.imageUrl ? (
+                <img
+                  src={featured.imageUrl}
+                  alt={featured.name}
+                  className="h-full w-full object-cover"
+                />
+              ) : (
+                <span className="text-6xl">🍺</span>
+              )}
+            </div>
+          </div>
+        </section>
+      )}
+
       <section id="nosotros" className="scroll-mt-[175px] bg-ink py-16 text-cream">
         <div className="mx-auto grid max-w-5xl gap-10 px-4 sm:grid-cols-2 sm:items-center">
           <div>
@@ -113,6 +161,27 @@ export function CatalogPage() {
             />
           </div>
         </div>
+      </section>
+
+      <section id="eventos" className="mx-auto max-w-2xl scroll-mt-[175px] px-4 py-16 text-center">
+        <span className="inline-block rounded-full border border-gold/60 px-4 py-1 font-display text-xs font-medium tracking-[0.2em] text-gold-dark uppercase">
+          Eventos
+        </span>
+        <h2 className="mt-4 font-display text-3xl font-semibold tracking-tight text-ink uppercase sm:text-4xl">
+          Nos vemos pronto
+        </h2>
+        <p className="mt-4 text-ink/80">
+          Todavía estamos armando la agenda de ferias, pop-ups y degustaciones. Seguinos en
+          Instagram para enterarte apenas confirmemos fecha y lugar.
+        </p>
+        <a
+          href="https://instagram.com/cerveza_maca"
+          target="_blank"
+          rel="noreferrer"
+          className="mt-6 inline-block rounded-full bg-gold px-7 py-3 font-display text-sm font-semibold tracking-wide text-ink uppercase transition hover:bg-gold-dark"
+        >
+          @cerveza_maca
+        </a>
       </section>
     </main>
   );
