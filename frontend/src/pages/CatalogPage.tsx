@@ -22,36 +22,38 @@ export function CatalogPage() {
         className="relative flex min-h-[72vh] items-center bg-cover bg-[center_30%] sm:min-h-[85vh]"
         style={{ backgroundImage: "url(/brand/hero-maca.jpg)" }}
       >
-        <div className="absolute inset-0 bg-gradient-to-r from-ink/80 via-ink/45 to-ink/10" />
+        <div className="absolute inset-0 bg-gradient-to-l from-ink/80 via-ink/40 to-transparent" />
         <div className="absolute inset-0 bg-gradient-to-t from-ink/70 via-transparent to-transparent" />
 
-        <div className="relative mx-auto w-full max-w-5xl px-4 py-16">
-          <span className="inline-block rounded-full border border-gold/60 bg-ink/30 px-4 py-1 font-display text-xs font-medium tracking-[0.2em] text-gold uppercase backdrop-blur-sm">
-            Cerveza artesanal sanmartinense
-          </span>
-          <h1 className="mt-5 max-w-xl font-display text-5xl leading-[0.95] font-semibold tracking-tight text-paper uppercase sm:text-6xl">
-            Tan salvaje
-            <br />
-            como el sur
-          </h1>
-          <p className="mt-5 max-w-md text-base text-paper/85">
-            Elaboración artesanal en San Martín de los Andes. Como el macá tobiano, un ave rara y
-            única de la Patagonia — nuestra cerveza también es de acá y para acá. Entrega a
-            domicilio.
-          </p>
-          <a
-            href="#catalogo"
-            className="mt-8 inline-block rounded-full bg-gold px-7 py-3 font-display text-sm font-semibold tracking-wide text-ink uppercase transition hover:bg-gold-dark"
-          >
-            Ver catálogo
-          </a>
+        <div className="relative flex w-full justify-end">
+          <div className="mx-4 w-full max-w-md sm:mr-10 sm:max-w-lg lg:mr-20">
+            <span className="inline-block rounded-full border border-gold/60 bg-ink/30 px-4 py-1 font-display text-xs font-medium tracking-[0.2em] text-gold uppercase backdrop-blur-sm">
+              Cerveza artesanal sanmartinense
+            </span>
+            <h1 className="mt-5 font-display text-5xl leading-[0.95] font-semibold tracking-tight text-paper uppercase sm:text-6xl">
+              Tan salvaje
+              <br />
+              como el sur
+            </h1>
+            <p className="mt-5 text-base text-paper/85">
+              Elaboración artesanal en San Martín de los Andes. Como el macá tobiano, un ave rara y
+              única de la Patagonia — nuestra cerveza también es de acá y para acá. Entrega a
+              domicilio.
+            </p>
+            <a
+              href="#catalogo"
+              className="mt-8 inline-block rounded-full bg-gold px-7 py-3 font-display text-sm font-semibold tracking-wide text-ink uppercase transition hover:bg-gold-dark"
+            >
+              Ver catálogo
+            </a>
+          </div>
         </div>
 
         <img
           src="/brand/macalogo1.png"
           alt=""
           aria-hidden="true"
-          className="absolute right-4 bottom-4 hidden w-36 opacity-95 drop-shadow-lg sm:block md:w-44"
+          className="absolute bottom-4 left-4 hidden w-28 opacity-90 drop-shadow-lg sm:block md:w-32"
         />
       </section>
 
