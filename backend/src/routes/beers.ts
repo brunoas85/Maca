@@ -14,6 +14,12 @@ beersRouter.get("/", async (_req, res) => {
   res.json(beers);
 });
 
+// Admin: listado completo (incluye inactivas y sin stock)
+beersRouter.get("/admin/all", requireAdmin, async (_req, res) => {
+  const beers = await prisma.beer.findMany({ orderBy: { createdAt: "asc" } });
+  res.json(beers);
+});
+
 // Público: ficha de producto
 beersRouter.get("/:id", async (req, res) => {
   const id = req.params.id as string;
