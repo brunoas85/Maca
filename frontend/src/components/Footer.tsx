@@ -4,15 +4,27 @@ export function Footer() {
   return (
     <footer className="border-t border-line bg-ink text-cream">
       <div className="mx-auto max-w-5xl px-4 py-10">
-        <div className="flex flex-col items-center gap-6 text-center sm:flex-row sm:items-start sm:justify-between sm:text-left">
-          <div>
-            <span className="font-display text-xl font-semibold tracking-wide uppercase">Macá</span>
-            <p className="mt-1 max-w-xs text-sm text-cream/70">
-              Cerveza artesanal sanmartinense.
-            </p>
+        <div className="grid grid-cols-1 items-center gap-10 text-center sm:grid-cols-3 sm:text-left">
+          <nav className="order-2 flex flex-col items-center gap-2 text-sm sm:order-1 sm:items-start">
+            <a href="/#nosotros" className="hover:text-gold">
+              Quiénes somos
+            </a>
+            <a href="/#catalogo" className="hover:text-gold">
+              Pedidos
+            </a>
+            <a href="/#birra-del-mes" className="hover:text-gold">
+              Birra del mes
+            </a>
+            <a href="/#eventos" className="hover:text-gold">
+              Eventos
+            </a>
+          </nav>
+
+          <div className="order-1 flex items-center justify-center sm:order-2">
+            <img src="/brand/macaLogoNav-footer.png" alt="Macá" className="h-24 w-auto opacity-80" />
           </div>
 
-          <div className="flex items-center gap-4">
+          <div className="order-3 flex flex-col items-center gap-4 sm:items-end">
             <a
               href="https://wa.me/5492944319753"
               target="_blank"
@@ -36,18 +48,6 @@ export function Footer() {
               </svg>
             </a>
           </div>
-
-          <nav className="flex flex-col gap-2 text-sm">
-            <a href="/#nosotros" className="hover:text-gold">
-              Quiénes somos
-            </a>
-            <a href="/#birra-del-mes" className="hover:text-gold">
-              Birra del mes
-            </a>
-            <a href="/#eventos" className="hover:text-gold">
-              Eventos
-            </a>
-          </nav>
         </div>
 
         <p className="mt-8 border-t border-cream/10 pt-6 text-center text-xs text-cream/50">
